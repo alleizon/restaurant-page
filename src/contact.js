@@ -1,8 +1,16 @@
+import { navbar } from "./navbar";
+
 export const ContactPage = (() => {
+  const content = document.querySelector("#content");
+
   const renderPage = () => {
-    //
-    console.log("test");
+    navbar();
   };
 
-  return { renderPage };
+  const removePage = () => {
+    content.classList.remove("contact");
+    while (content.firstElementChild) content.firstElementChild.remove();
+  };
+
+  return { renderPage, removePage };
 })();

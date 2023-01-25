@@ -7,7 +7,7 @@ export const HomePage = (() => {
     links.forEach((link) => {
       const a = document.createElement("a");
       a.id = `${link}`;
-      a.classList.add("nav-btn");
+      a.classList.add("home-nav-btn");
       a.textContent = link;
       linkWrapper.appendChild(a);
     });
@@ -36,6 +36,7 @@ export const HomePage = (() => {
     sourceLink.textContent = "Unsplash";
     sourceLink.setAttribute("href", "https://unsplash.com/photos/wEBg_pYtynw");
     footer.innerHTML = `Image by ${authorLink.outerHTML} on ${sourceLink.outerHTML}`;
+    content.appendChild(footer);
   };
 
   const renderPage = () => {

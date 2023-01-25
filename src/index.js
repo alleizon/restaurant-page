@@ -3,7 +3,7 @@ import { ContactPage } from "./contact";
 import { AboutPage } from "./about";
 import { MenuPage } from "./menu";
 
-const displayController = (() => {
+(() => {
   let curPage = HomePage;
   curPage.renderPage();
 
@@ -26,7 +26,7 @@ const displayController = (() => {
     curPage.renderPage();
   };
 
-  const links = Array.from(document.querySelectorAll(".nav-btn"));
+  const links = Array.from(document.querySelectorAll(".home-nav-btn"));
   links.forEach((link) => {
     link.addEventListener("click", changePage);
   });
