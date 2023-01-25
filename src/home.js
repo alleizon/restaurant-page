@@ -1,10 +1,12 @@
-export const homePage = (() => {
+export const HomePage = (() => {
   const content = document.querySelector("#content");
+  content.classList.add("home");
 
   const createLinkBtns = (linkWrapper) => {
     const links = ["About", "Menu", "Contact"];
     links.forEach((link) => {
       const a = document.createElement("a");
+      a.id = `${link}`;
       a.classList.add("nav-btn");
       a.textContent = link;
       linkWrapper.appendChild(a);
@@ -41,5 +43,10 @@ export const homePage = (() => {
     createFooter();
   };
 
-  return { renderPage };
+  const removePage = () => {
+    content.classList.remove("home");
+    while (content.firstElementChild) content.firstElementChild.remove();
+  };
+
+  return { renderPage, removePage };
 })();
