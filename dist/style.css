@@ -107,9 +107,13 @@ a:visited {
     padding-bottom: 10px;
 }
 
+/* NAVBAR */
+
 nav {
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     position: relative;
+    top: 0;
+    width: 100%;
     display:flex;
     gap: 10px;
     color: white;
@@ -118,6 +122,7 @@ nav {
 }
 
 nav > a {
+    cursor: pointer;
     position: relative;
     font-family: "Chinese Rocks";
     font-size: 1.5rem;
@@ -142,4 +147,141 @@ nav > a:hover::after {
 nav > a:nth-child(1) {
     position: absolute;
     left: 1rem;
+}
+
+/* ABOUT */
+
+#content.about {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#content.about::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("assets/images/6005a1b6ce01d_48B58PIC3eRej8222m58PICemPIC2018.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    opacity: 0.7;
+}
+
+.amenities {
+    padding: 1.5rem 200px;
+    display: grid;
+    grid-template: min-content 1fr / repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.amenities > div {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#content.about h1 {
+    font-family: "Chinese Rocks";
+    font-size: 2rem;
+    text-align: center;
+}
+
+.amenities > h1 {
+    grid-column: 1 / -1;
+}
+
+#content.about > div {
+    flex: 2;
+    border-top: 1px solid rgba(128, 128, 128, 0.301);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.amenities {
+    flex: 1 !important;
+}
+
+.icon {
+    width: 75px;
+    height: 75px;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+.icon {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon > i {
+    scale: 1.5;
+    color: black;
+}
+
+.about-us {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.left, .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right {
+    border: 2px solid gray;
+}
+
+.gallery {
+    padding: 2rem;
+    display: grid;
+    gap: 25px;
+    grid-template-rows: min-content minmax(300px,1fr); 
+    grid-template-columns: repeat(3, minmax(300px, 400px));
+    justify-content: center;
+}
+
+.gallery h1 {
+    grid-column: 1 / -1;
+}
+
+.gallery > div {
+    border-radius: 1rem;
+    position: relative;
+}
+
+.gallery > div:nth-child(2) {
+    background: url("assets/images/debbie-tea-LO7rNP0LRro-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.gallery > div:nth-child(3) {
+    background: url("assets/images/gyoza.jpeg");
+    background-size: cover;
+}
+.gallery > div:nth-child(4) {
+    background: url("assets/images/restaurant.jpg");
+    background-size: cover;
+}
+
+.gallery > div > a {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
 }

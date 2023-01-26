@@ -3,7 +3,7 @@ import { ContactPage } from "./contact";
 import { AboutPage } from "./about";
 import { MenuPage } from "./menu";
 
-(() => {
+export default (() => {
   let curPage = HomePage;
   curPage.renderPage();
 
@@ -21,13 +21,20 @@ import { MenuPage } from "./menu";
         curPage = MenuPage;
         break;
       default:
+        curPage = HomePage;
         break;
     }
     curPage.renderPage();
+    if (curPage == HomePage) addhomePageEL();
   };
 
-  const links = Array.from(document.querySelectorAll(".home-nav-btn"));
-  links.forEach((link) => {
-    link.addEventListener("click", changePage);
-  });
+  const addhomePageEL = () => {
+    const links = Array.from(document.querySelectorAll(".home-nav-btn"));
+    links.forEach((link) => {
+      link.addEventListener("click", changePage);
+    });
+  };
+  addhomePageEL();
+
+  return { changePage };
 })();

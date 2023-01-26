@@ -1,6 +1,5 @@
 export const HomePage = (() => {
   const content = document.querySelector("#content");
-  content.classList.add("home");
 
   const createLinkBtns = (linkWrapper) => {
     const links = ["About", "Menu", "Contact"];
@@ -40,6 +39,8 @@ export const HomePage = (() => {
   };
 
   const renderPage = () => {
+    content.className = "";
+    content.classList.add("home");
     createBgText();
     createFooter();
   };
