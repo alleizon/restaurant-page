@@ -158,7 +158,8 @@ nav > a:nth-child(1) {
     position: relative;
 }
 
-#content.about::before {
+#content.about::before,
+#content.contact::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -331,3 +332,70 @@ nav > a:nth-child(1) {
     margin: 1rem 0;
 }
 
+/* CONTACT */
+
+#content.contact {
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+#content.contact::before {
+    transform: scaleX(1);
+}
+
+#content.contact .body {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content.contact .card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: max(500px, 65%);
+    height: 500px;
+    border: 2px solid rgba(128, 128, 128, 0.753);
+    gap:10px;
+}
+
+.card h1 {
+    font-family: "Chinese Rocks";
+    font-size: 2rem;
+    position: relative;
+}
+
+.card h1::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.card h2 span {
+    font-weight: 400;
+}
+
+.card input, .card textarea {
+    appearance: none;
+    outline: none;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: #ff000061;
+    padding: 5px;
+}
+
+.card :nth-child(2)::after,
+.card :nth-child(3)::after,
+.card :nth-child(4)::after {
+    position: absolute;
+    content: '';
+}
