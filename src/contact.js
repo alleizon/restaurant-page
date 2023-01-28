@@ -4,6 +4,7 @@ export const ContactPage = (() => {
   const content = document.querySelector("#content");
 
   const renderPage = () => {
+    content.classList.add("contact");
     navbar();
   };
 

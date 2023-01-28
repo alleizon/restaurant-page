@@ -285,3 +285,49 @@ nav > a:nth-child(1) {
     width: 100%;
     height: 100%;
 }
+
+/* MENU */
+
+#content.menu {
+    display:grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 2rem;
+    background: url("assets/images/6005a1b6ce01d_48B58PIC3eRej8222m58PICemPIC2018.jpg");
+    background-position:center;
+    background-size:cover;
+}
+
+#content.menu > h1,
+#content.menu nav {
+    grid-column: 1 / -1;
+}
+
+#content.menu > h1 {
+    font-size: 2rem;
+    font-family: "Chinese Rocks";
+    text-align: center;
+}
+
+#content.menu img {
+    width: clamp(320px, 60% ,480px);
+    border-radius: 15px;
+}
+
+#content.menu p {
+    justify-self: right;
+    font-weight: 600;
+    padding: 1rem;
+    border: 2px solid black;
+}
+#content.menu img {
+    justify-self: left;
+    border: 2px solid black;
+}
+
+#content.menu br {
+    margin: 1rem 0;
+}
+
